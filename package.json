@@ -1,0 +1,20 @@
+{
+	"name": "georgia-project",
+	"version": "1.0.0",
+	"description": "SCSS Project",
+	"main": "index.js",
+	"scripts": {
+		"watch": "node-sass -o css scss/main.scss -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/diegopagini/Georgian_SCSS.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/diegopagini/Georgian_SCSS/issues"
+	},
+	"homepage": "https://github.com/diegopagini/Georgian_SCSS#readme"
+}
