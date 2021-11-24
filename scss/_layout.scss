@@ -19,3 +19,58 @@
 		@include centering(50%, 50%);
 	}
 }
+
+.about-us {
+	align-items: center;
+	display: flex;
+	height: 90vh;
+
+	&-left {
+		position: relative;
+		left: -200px;
+		width: 40%;
+
+		img {
+			opacity: 0.7;
+			width: 100%;
+		}
+	}
+
+	&-right {
+		align-items: center;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		padding: 0 100px;
+		width: 60%;
+
+		.stars {
+			margin: 30px 0;
+		}
+
+		.star {
+			color: $color-primary;
+			font-size: 15px;
+			margin-left: 10px;
+		}
+
+		.description {
+			color: $color-secondary;
+			font-family: $font-josefinSans;
+			font-size: 25px;
+			font-style: italic;
+			text-align: justify;
+
+			&::first-letter {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+.gallery {
+	.cards-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

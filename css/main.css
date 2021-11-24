@@ -1,5 +1,9 @@
 /** @format */
 /** @format */
+.card-overlay, .card-img {
+  height: 100%;
+  width: 100%; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -27,6 +31,43 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.about-us {
+  align-items: center;
+  display: flex;
+  height: 90vh; }
+  .about-us-left {
+    position: relative;
+    left: -200px;
+    width: 40%; }
+    .about-us-left img {
+      opacity: 0.7;
+      width: 100%; }
+  .about-us-right {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+    width: 60%; }
+    .about-us-right .stars {
+      margin: 30px 0; }
+    .about-us-right .star {
+      color: #d3ab55;
+      font-size: 15px;
+      margin-left: 10px; }
+    .about-us-right .description {
+      color: #bbb;
+      font-family: "Josegin Sans", sans-serif;
+      font-size: 25px;
+      font-style: italic;
+      text-align: justify; }
+      .about-us-right .description::first-letter {
+        padding-left: 15px; }
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
 
 /** @format */
 .logo {
@@ -88,3 +129,53 @@ body {
   .main-btn:hover {
     background-color: #d3ab55;
     color: #262626; }
+
+.card {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  width: 33.3333%; }
+  .card:hover .card-overlay {
+    left: 0; }
+  .card-overlay {
+    background-color: rgba(211, 171, 85, 0.6);
+    color: #fff;
+    flex-direction: column;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transition: left 0.7s;
+    z-index: 10;
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    .card-overlay-heading {
+      font-family: "Nunito", sans-serif;
+      font-size: 50px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: capitalize; }
+    .card-overlay-paragraph {
+      font-family: "Nunito", sans-serif;
+      font-size: 30px;
+      margin-bottom: 30px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: capitalize; }
+    .card-overlay-btn {
+      background-color: #fff;
+      border: 1px solid #d3ab55;
+      border-radius: 30px;
+      color: #d3ab55;
+      cursor: pointer;
+      font-family: "Josegin Sans", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      height: 40px;
+      letter-spacing: 1px;
+      outline: none;
+      text-transform: uppercase;
+      width: 150px; }
+  .card-img {
+    object-fit: cover;
+    opacity: 0.5; }
