@@ -1,5 +1,75 @@
 /** @format */
 
+.navbar {
+	position: relative;
+	z-index: 20;
+
+	&-navigation {
+		display: flex;
+
+		&-left {
+			background-color: $color-dark;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			width: 50vw;
+
+			.left-img {
+				border-radius: 10px;
+				box-shadow: 0 15px 60px rgba($color: $color-black, $alpha: 0.4);
+				opacity: 0.7;
+				position: absolute;
+				width: 50%;
+			}
+
+			.left-img-1 {
+				left: 15%;
+				top: 15%;
+			}
+			.left-img-2 {
+				left: 25%;
+				top: 35%;
+			}
+			.left-img-3 {
+				left: 35%;
+				top: 55%;
+			}
+		}
+
+		&-right {
+			background-color: #1f1d1d;
+			height: 100vh;
+			position: fixed;
+			right: 0;
+			width: 50vw;
+			@include center;
+		}
+
+		.nav-list {
+			&-item {
+				list-style: none;
+			}
+
+			&-link {
+				color: $color-secondary;
+				display: block;
+				font-family: $font-dancingScript;
+				font-size: 50px;
+				margin: 20px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.5s;
+				@include textStyles(capitalize);
+
+				&:hover {
+					color: $color-primary;
+					letter-spacing: 4px;
+				}
+			}
+		}
+	}
+}
+
 .header {
 	background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
 		url(../images/bg.jpeg) center no-repeat;
@@ -72,5 +142,46 @@
 	.cards-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+	}
+}
+
+.footer {
+	flex-direction: column;
+	padding: 70px 0;
+	@include center;
+
+	&-header {
+		align-items: center;
+		display: flex;
+		margin-bottom: 70px;
+	}
+
+	.social-media {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 70px;
+		width: 300px;
+
+		&-item {
+			list-style: none;
+		}
+
+		&-link {
+			color: $color-secondary;
+			font-size: 50px;
+			text-decoration: none;
+			transition: color 0.7s;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+	&-copyright {
+		color: $color-secondary;
+		font-family: $font-josefinSans;
+		font-size: 18px;
+		@include textStyles(capitalize);
 	}
 }

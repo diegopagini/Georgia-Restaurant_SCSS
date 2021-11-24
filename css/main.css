@@ -12,6 +12,59 @@ body {
   background-color: #262626; }
 
 /** @format */
+.navbar {
+  position: relative;
+  z-index: 20; }
+  .navbar-navigation {
+    display: flex; }
+    .navbar-navigation-left {
+      background-color: #262626;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      width: 50vw; }
+      .navbar-navigation-left .left-img {
+        border-radius: 10px;
+        box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+        opacity: 0.7;
+        position: absolute;
+        width: 50%; }
+      .navbar-navigation-left .left-img-1 {
+        left: 15%;
+        top: 15%; }
+      .navbar-navigation-left .left-img-2 {
+        left: 25%;
+        top: 35%; }
+      .navbar-navigation-left .left-img-3 {
+        left: 35%;
+        top: 55%; }
+    .navbar-navigation-right {
+      background-color: #1f1d1d;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      width: 50vw;
+      align-items: center;
+      display: flex;
+      justify-content: center; }
+    .navbar-navigation .nav-list-item {
+      list-style: none; }
+    .navbar-navigation .nav-list-link {
+      color: #bbb;
+      display: block;
+      font-family: "Dancing Script", cursive;
+      font-size: 50px;
+      margin: 20px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.5s;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: capitalize; }
+      .navbar-navigation .nav-list-link:hover {
+        color: #d3ab55;
+        letter-spacing: 4px; }
+
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) center no-repeat;
   background-size: cover;
@@ -68,6 +121,38 @@ body {
 .gallery .cards-wrapper {
   display: flex;
   flex-wrap: wrap; }
+
+.footer {
+  flex-direction: column;
+  padding: 70px 0;
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+  .footer-header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 70px; }
+  .footer .social-media {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    width: 300px; }
+    .footer .social-media-item {
+      list-style: none; }
+    .footer .social-media-link {
+      color: #bbb;
+      font-size: 50px;
+      text-decoration: none;
+      transition: color 0.7s; }
+      .footer .social-media-link:hover {
+        color: #d3ab55; }
+  .footer-copyright {
+    color: #bbb;
+    font-family: "Josegin Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize; }
 
 /** @format */
 .logo {
