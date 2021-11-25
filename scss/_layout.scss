@@ -10,9 +10,10 @@
 		&-left {
 			background-color: $color-dark;
 			height: 100vh;
-			left: 0;
+			left: -50vw;
 			position: fixed;
 			width: 50vw;
+			transition: left 0.8s cubic-bezier(1, 0, 0, 1);
 
 			.left-img {
 				border-radius: 10px;
@@ -40,8 +41,9 @@
 			background-color: #1f1d1d;
 			height: 100vh;
 			position: fixed;
-			right: 0;
+			right: -50vw;
 			width: 50vw;
+			transition: right 0.8s cubic-bezier(1, 0, 0, 1);
 			@include center;
 		}
 
@@ -68,6 +70,31 @@
 			}
 		}
 	}
+}
+
+// This way we can manipulate the navbar only with css
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+	left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+	right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+	transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+	transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+	opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+	transform: rotateZ(40deg);
 }
 
 .header {

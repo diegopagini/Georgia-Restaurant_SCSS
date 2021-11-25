@@ -1,5 +1,31 @@
 /** @format */
 
+.hamburger-menu {
+	height: 40px;
+	position: fixed;
+	right: 5%;
+	top: 10%;
+	width: 40px;
+	z-index: 30;
+
+	.menu {
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		transition: transform 0.5s;
+		@extend %fullSpace;
+
+		&-line {
+			background-color: $color-primary;
+			height: 4px;
+			transition: all 0.5s 0.5s;
+			transform-origin: right;
+			width: 100%;
+		}
+	}
+}
+
 .logo {
 	border: 3px solid $color-primary;
 	border-radius: 50%;

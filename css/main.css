@@ -1,6 +1,6 @@
 /** @format */
 /** @format */
-.card-overlay, .card-img {
+.hamburger-menu .menu, .card-overlay, .card-img {
   height: 100%;
   width: 100%; }
 
@@ -20,9 +20,10 @@ body {
     .navbar-navigation-left {
       background-color: #262626;
       height: 100vh;
-      left: 0;
+      left: -50vw;
       position: fixed;
-      width: 50vw; }
+      width: 50vw;
+      transition: left 0.8s cubic-bezier(1, 0, 0, 1); }
       .navbar-navigation-left .left-img {
         border-radius: 10px;
         box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
@@ -42,8 +43,9 @@ body {
       background-color: #1f1d1d;
       height: 100vh;
       position: fixed;
-      right: 0;
+      right: -50vw;
       width: 50vw;
+      transition: right 0.8s cubic-bezier(1, 0, 0, 1);
       align-items: center;
       display: flex;
       justify-content: center; }
@@ -64,6 +66,24 @@ body {
       .navbar-navigation .nav-list-link:hover {
         color: #d3ab55;
         letter-spacing: 4px; }
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0; }
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg); }
 
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) center no-repeat;
@@ -155,6 +175,26 @@ body {
     text-transform: capitalize; }
 
 /** @format */
+.hamburger-menu {
+  height: 40px;
+  position: fixed;
+  right: 5%;
+  top: 10%;
+  width: 40px;
+  z-index: 30; }
+  .hamburger-menu .menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: transform 0.5s; }
+    .hamburger-menu .menu-line {
+      background-color: #d3ab55;
+      height: 4px;
+      transition: all 0.5s 0.5s;
+      transform-origin: right;
+      width: 100%; }
+
 .logo {
   border: 3px solid #d3ab55;
   border-radius: 50%;
